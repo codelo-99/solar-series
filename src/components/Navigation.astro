@@ -5,7 +5,11 @@ const routers = [
     {name: '博客', url: '/blog/'},
 ]
 ---
-{routers.map(item=>(
-<a style="" href={item.url}> {item.name} </a>
-<></>
-    ))}
+<div class="nav-links">
+    {
+        routers.map(item => (
+                <a style="" href={item.url}> {item.name}</a>
+                <></>
+        ))
+    }
+</div>

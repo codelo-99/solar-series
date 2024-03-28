@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/Navigation.astro'
+import Header from "../components/Header.astro";
 import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 const pageTitle = '我的 Astro 站点'
@@ -14,9 +14,12 @@ const pageTitle = '我的 Astro 站点'
     <title>{pageTitle}</title>
 </head>
 <body>
-<Navigation/>
+<Header/>
 
 <h1>{pageTitle}</h1>
 <Footer/>
+<script>
+    import '../scripts/menu'
+</script>
 </body>
 </html>
