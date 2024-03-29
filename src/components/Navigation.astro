@@ -1,15 +1,15 @@
 ---
 const routers = [
     {name: '首页', url: '/'},
-    {name: '关于', url: '/about/'},
+    {name: '关于', url: '/about/', attrs: {'data-astro-reload': true}},
     {name: '博客', url: '/blog/'},
     {name: '标签', url: '/tags/'},
 ]
 ---
-<div class="nav-links">
+<div class="nav-links" transition:animate="slide">
     {
         routers.map(item => (
-                <a style="" href={item.url}> {item.name}</a>
+                <a style="" href={item.url} {...item.attrs} > {item.name}</a>
                 <></>
         ))
     }
